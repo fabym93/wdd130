@@ -1,37 +1,58 @@
+:ROOT{
+/* Color palette */
+  --color-darkblue: darkblue;
+  --color-gray-900: #333;
+  --color-gray-50: #eeeeee;
+  --color-border: rgb(0 0 0 / 0.2);
+  --color-border-black: #000;
+
+  /* Sizing & spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px; /* 1rem = 16px */
+  --spacing-lg: 20px;
+  --max-width: 1024px;
+
+  /* Image & shadow */
+  --img-border: 1px solid #000;
+  --shadow: 0 0 30px gray;
+}
+
+
 nav{
-  background-color: darkblue;
+  background-color: var(--color-darkblue);
   padding: 10px;
 }
 nav a{
   color: white;
   display: block;
-  padding: 20px;
+  padding: var(--spacing-lg);
 }
 h1{
-    color: darkblue;
+    color: var(--color-darkblue);
 }
 main img{
   width: 150px;
   height: auto;
-  border: 1px solid black;
-  padding: 2px;
-  box-shadow: 0 0 30px gray;
+  border: var(--img-border);
+  padding: var(--spacing-xs);
+  box-shadow: var(--shadow);
 }
 p{
   padding: 0;
 }
 
 main{
-  max-width: 1024px;
+  max-width: var(--max-width);
 }
 
 aside{
   width: 20rem;
-  margin: 1rem;
-  border: 1px solid rgb(0 0 0 / 0.2); /* 1 */
-  padding: 1rem;
-  background-color: #eeeeee;/* This is a background color of my Website*/
-  color: #333;
+  margin: var(--spacing-md);
+  border: var(--color-border);
+  padding: var(--spacing-md);
+  background-color: var(--color-gray-50);
+  color: var(--color-gray-900);
   text-align: center;  
 }
 
@@ -41,7 +62,7 @@ aside img{
 }
 
 footer{
-  margin-top: 15px;
-  border-top: 1px solid #000;
-  text-align: center;
+  margin-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border-black);
+  text-align: center
 }
