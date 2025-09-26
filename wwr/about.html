@@ -12,36 +12,43 @@
 </head>
 
 <body>
-    <header>
-        <!-- Element 1: Site`s Logo -->
-        <div class="logo">
-
-            <img src="images/logo-thunderfalls.png" alt="ThunderFalls White Water`s Logo">
+    <header class="header-row">
+        <div class="left-image" aria-label="Imagen izquierda">
+            <img src="images/logo-thunderfalls.png" alt="Imagen decorativa" />
         </div>
-        <nav>
-            <ul>
+
+        <nav class="right-menu" aria-label="Navegación principal">
+            <ul class="grid-four">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="trips.html">Trips</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
-
     </header>
-    <main>
-        <div class="hero">
-            <img src="images/raftinggroup.jpg" alt="Panoramic View of a rafting group">
-            <h1> About Us - ThunderFalls White Water</h1>
-            <article>
-                <img src="images/raft-staff.jpg" alt="Staff working">
-                <p>We are a company with over 12 years of experience guiding safe and memorable whitewater adventures.
+    <!-- Sección 1: título con tarjeta central -->
+    <section class="section hero">
+        <h1 class="section-title">About Us:ThunderFalls White Water Rafting</h1>
+        <div class="card">
+            <div class="card-media">
+                <img src="images/raftinggroup.jpg.jpg" alt="Imagen ilustrativa" />
+            </div>
+            <div class="card-content">
+                <p>
+                    We are a company with over 12 years of experience guiding safe and memorable whitewater adventures.
                     We are dedicated to
                     turning every ride into a story of excitement and connection with nature.</p>
-            </article>
+                </p>
+            </div>
         </div>
-        <section>
-            <h2>History</h2>
-            <p>Thunderfalls White Water was born from the vision of two friends passionate about adventure and rafting
+    </section>
+
+    <!-- Section 2: History -->
+    <section class="section">
+        <h2 class="section-title">History</h2>
+        <div class="three-column">
+            <p class="lead">
+                Thunderfalls White Water was born from the vision of two friends passionate about adventure and rafting
                 excursions. In
                 2010, after a whitewater expedition, they realized that extreme experiences could go hand in hand with
                 environmental
@@ -49,30 +56,78 @@
                 founded
                 Thunderfalls White Water with the mission of organizing and coordinating safe and memorable rafting
                 excursions for
-                explorers of all levels. With a small operations center by the river and the support of experienced
+                explorers of all levels.
+            </p>
+            <div class="caption-box">
+                <img src="images/raft-staff.jpg.jpg" alt="Imagen destacada" />
+            </div>
+            <p class="lead">
+                With a small operations center by the river and the support of experienced
                 guides, the company
                 grew thanks to innovation in logistics, ongoing training, and a strong aquatic ecosystem conservation
                 program. Today,
                 Thunderfalls White Water continues to expand its rafting routes, maintaining its spirit of adventure and
                 environmental
                 commitment, and accompanying each group on journeys that connect communities, rivers, and unforgettable
-                emotions..</p>
-        </section>
-        <section>
-            <h2>Adventure awaits you!</h2>
-        </section>
+                emotions.. Receive personalized advice and a detailed safety protocol before your trip.
+            </p>
+        </div>
+    </section>
 
-    </main>
-    <footer>
+    <!-- Section 3: Adventure -->
+    <section class="adventures-section" aria-label="Adventure Gallery">
+        <header class="adventures-header">
+            <h2 class="section-title">Adventure Awaits You</h2>
+        </header>
+
+        <div class="adventures-grid" role="list">
+            <figure class="card-item" role="listitem">
+                <div class="thumb">
+                    <img src="images/1.jpg" alt="Los Dientes del Diablo" />
+                </div>
+                <figcaption class="caption">Los Dientes del Diablo</figcaption>
+            </figure>
+
+            <figure class="card-item" role="listitem">
+                <div class="thumb">
+                    <img src="images/2.jpg" alt="Big Mallard" />
+                </div>
+                <figcaption class="caption">Big Mallard</figcaption>
+            </figure>
+
+            <figure class="card-item" role="listitem">
+                <div class="thumb">
+                    <img src="images/3.jpg" alt="Half Day Adventure" />
+                </div>
+                <figcaption class="caption">Half Day Adventure</figcaption>
+            </figure>
+
+            <figure class="card-item" role="listitem">
+                <div class="thumb">
+                    <img src="images/4.jpg" alt="Chasing Rapids" />
+                </div>
+                <figcaption class="caption">Chasing Rapids</figcaption>
+            </figure>
+
+            <figure class="card-item" role="listitem">
+                <div class="thumb">
+                    <img src="images/5.jpg" alt="Emerald Canyon Float" />
+                </div>
+                <figcaption class="caption">Emerald Canyon Float</figcaption>
+            </figure>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
         <nav class="socialmedia">
             <a href="https://facebook.com">
-                <img src="images/fb-icon.png" alt="Facebook Icon" class="social-icon">
+                <img src="images/fb-icon.png.png" alt="Facebook Icon" class="social-icon">
             </a>
             <a href="https://linkedin.com">
-                <img src="images/linkedin-icon.png" alt="LinkedIn Icon" class="social-icon">
+                <img src="images/linkedin-icon.png.png" alt="LinkedIn Icon" class="social-icon">
             </a>
             <a href="https://instagram.com">
-                <img src="images/ig-icon.png" alt="Instagram Icon" class="social-icon">
+                <img src="images/instagram-square.svg" alt="Instagram Icon" class="social-icon">
             </a>
         </nav>
         <p> © 2025 ⚡ ThunderFalls White Water ⚡ - Fabiana Elizabeth Moya </p>
