@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 130</title>
+    <link rel="stylesheet" href="styles/pol-form.css">
 </head>
 
 <header>
-
+    <p> Week 5</p>
 </header>
 
 <body>
@@ -18,29 +19,38 @@
         <form>
             <fieldset>
                 <legend> Contact Information </legend>
-                <label for="fullname"> Full name: </label>
-                <input type="text" id="fullname" name="fullname">
-                <label for="useremail">Email: </label>
-                <input type="email" id="useremail" name="useremail">
+                <div class="form-item column2">
+                    <label for="fullname"> Full Name: </label>
+                    <input type="text" id="fullname" name="fullname">
+                </div>
+                <div class="form-item column2">
+                    <label for="useremail">Email: </label>
+                    <input type="email" id="useremail" name="useremail">
+                </div>
             </fieldset>
             <fieldset>
                 <legend>Questions</legend>
                 <ul>
-                    <li><label for="browser"> What is your favorite browser?</label> </li>
-                    <select id="browser" name="browser">
-                        <option value="chrome">chrome</option>
-                        <option value="firefox">firefox</option>
-                        <option value="safari">safari</option>
-                        <option value="edge">edge</option>
-                        <option value="brave">brave</option>
-                        <option value="other">other</option>
-                    </select>
-                    <li><label for="pet">Do you have a household pet?</label> </li>
-                    <input type="checkbox" id="pet" name="pet">
-                    <li><label for="feedback">List the places you have lived:</label></li>
-                    <textarea id="feedback" name="feedback" rows="3"
-                        placeholder="Stillwater Florida, Amsterdam Netherlands, Tibuktu, Mali"></textarea>
+                    <div class="form-item column2">
+                        <li><label for="browser"> What is your favorite browser?</label> </li>
+                        <select id="browser" name="browser">
+                            <option value="chrome">chrome</option>
+                            <option value="firefox">firefox</option>
+                            <option value="safari">safari</option>
+                            <option value="edge">edge</option>
+                            <option value="brave">brave</option>
+                            <option value="other">other</option>
+                        </select>
+                    </div>
+                    <div class="form-item column1">
+                        <li><label for="pet">Do you have a household pet?</label> </li>
+                        <input type="checkbox" id="pet" name="pet">
+                        <li><label for="feedback">List the places you have lived:</label></li>
+                        <textarea id="feedback" name="feedback" rows="3"
+                            placeholder="Stillwater Florida, Amsterdam Netherlands, Tibuktu, Mali"></textarea>
+                    </div>
                 </ul>
+
             </fieldset>
             <button type="Submit">Submit Poll</button>
         </form>
