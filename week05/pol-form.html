@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 130</title>
+</head>
+
+<header>
+
+</header>
+
+<body>
+
+    <main>
+        <h1 class="title"> WDD 130 - HTML form - User poll </h1>
+        <form>
+            <fieldset>
+                <legend> Contact Information </legend>
+                <label for="fullname"> Full name: </label>
+                <input type="text" id="fullname" name="fullname">
+                <label for="useremail">Email: </label>
+                <input type="email" id="useremail" name="useremail">
+            </fieldset>
+            <fieldset>
+                <legend>Questions</legend>
+                <ul>
+                    <li><label for="browser"> What is your favorite browser?</label> </li>
+                    <select id="browser" name="browser">
+                        <option value="chrome">chrome</option>
+                        <option value="firefox">firefox</option>
+                        <option value="safari">safari</option>
+                        <option value="edge">edge</option>
+                        <option value="brave">brave</option>
+                        <option value="other">other</option>
+                    </select>
+                    <li><label for="pet">Do you have a household pet?</label> </li>
+                    <input type="checkbox" id="pet" name="pet">
+                    <li><label for="feedback">List the places you have lived:</label></li>
+                    <textarea id="feedback" name="feedback" rows="3"
+                        placeholder="Stillwater Florida, Amsterdam Netherlands, Tibuktu, Mali"></textarea>
+                </ul>
+            </fieldset>
+            <button type="Submit">Submit Poll</button>
+        </form>
+    </main>
+</body>
+
+<footer>
+    <p> © 2025 🌺 Fabiana Moya 🌺 Salta, Argentina </p>
+</footer>
+
+</html>
