@@ -1,0 +1,131 @@
+:root {
+
+  --bg: #f0f6ff;            
+  --card: #ffffff;          
+  --text: #0f1b2a;            
+  --muted: #4b6a88;
+  --primary: #2563eb;          
+  --primary-500: #3b82f6;      
+  --border: #dbe7f7;
+  --focus: 0 0 0 4px rgba(37, 99, 235, 0.25);
+  --radius: 12px;
+  --gap: 1rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+}
+
+.quiz-container {
+  max-width: 720px;
+  margin: 4rem auto;
+  padding: 1.25rem;
+}
+
+.quiz-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,.05);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+  text-align: center;
+  color: var(--text);
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: var(--focus);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 6em;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: -0.25rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button[type="submit"] {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform .02s ease-in-out, background-color .2s ease;
+}
+
+button[type="submit"]:hover {
+  background: var(--primary-500);
+}
+
+button[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+
+@media (max-width: 600px) {
+  .quiz-container {
+    padding: 0 1rem;
+    margin: 2rem auto;
+  }
+}

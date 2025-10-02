@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML and CSS Quiz</title>
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+
+<body>
+    <h1>Online Quiz on HTML and CSS</h1>
+
+    <form action="#" method="post" aria-label="HTML and CSS Quiz">
+        <!-- Question 1: text input -->
+        <div>
+            <label for="q1">
+                Which HTML tag is used to insert a link?
+            </label>
+            <input type="text" id="q1" name="q1" />
+        </div>
+
+        <!-- Question 2: textarea -->
+        <div>
+            <label for="q2">
+                Write a short description of what CSS is.
+            </label>
+            <textarea id="q2" name="q2" rows="4" cols="50"></textarea>
+        </div>
+
+        <!-- Question 3: simple choice -->
+        <div>
+            <label for="q3">
+                Which CSS property is used to change the text color?
+            </label>
+            <select id="q3" name="q3">
+                <option value="" selected disabled>Choose One ...</option>
+                <option value="color">color</option>
+                <option value="background">background</option>
+                <option value="font-size">font-size</option>
+            </select>
+        </div>
+
+        <!-- Question 4: number input -->
+        <div>
+            <label for="q4">
+                How many semantic elements are used in this fragment:
+                <code>&lt;header&gt;&lt;nav&gt;&lt;main&gt;&lt;section&gt;&lt;footer&gt;&lt;/footer&gt;&lt;/section&gt;&lt;/nav&gt;&lt;/main&gt;&lt;/header&gt;</code>?
+            </label>
+            <input type="number" id="q4" name="q4" min="1" step="1" placeholder="Enter an integer" />
+            <span class="hint">Hint: an integer greater than or equal to 1.</span>
+
+        </div>
+
+        <div>
+            <button type="submit">Submit quiz</button>
+        </div>
+    </form>
+</body>
+
+</html>
