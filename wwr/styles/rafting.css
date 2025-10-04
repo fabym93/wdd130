@@ -3,6 +3,10 @@
   --color-secondary: #fff679f5;
   --color-accent-1: #1a1a1a;
   --color-accent-2: #ff7301;
+  --color-border: #e5e7eb;            /* borde suave para componentes */  
+  --color-bg-section: #f9f7e9;          /* fondo suave para secciones */  
+  --bg-map: #f2f2f2;                   /* fondo opcional para el contenedor del mapa */  
+  --radius: 6px;    
 }
 
 *{box-sizing: border-box;}
@@ -237,4 +241,141 @@ a{color: inherit; text-decoration: none;}
   height: auto;              
   object-fit: cover; 
   align-items: center;
+}
+/* ============================================  
+   Contact Section 
+   ============================================ */  
+
+
+/* principal container */  
+.content-area {  
+  padding: 0 16px;  
+  max-width: 1100px;  
+  margin: 0 auto;  
+  display: block;  
+}  
+
+/* about company */  
+.company-info {  
+  background: var(--color-bg-section);  
+  padding: 20px;  
+  border: 1px solid var(--color-border);  
+  border-radius: 6px;  
+  text-align: center; }
+
+.company-info h1 {  
+  margin: 0 0 8px;  
+  font-size: 28px;  
+  color: var(--color-accent-1);  
+}  
+.company-info p {  
+  margin: 0;  
+  line-height: 1.5;  
+  color: #333;  
+}  
+
+/* form + map */  
+.contact-grid {  
+  display: grid;  
+  grid-template-columns: 1fr 1fr;  
+  gap: 24px;  
+  align-items: start;  
+  margin-top: 16px;  
+}  
+.mapa-wrap {  
+  background: #fff;  
+  border: 1px solid var(--color-border);  
+  padding: 8px;  
+  border-radius: 6px;  
+}  
+.mapa-wrap iframe {  
+  width: 100%;  
+  height: 450px;  
+  border: 0;   
+}  
+.contact-info {  
+  background: #fff;  
+  border: 1px solid var(--color-border);  
+  padding: 16px;  
+  border-radius: 6px;  
+}  
+.contact-info h2 {  
+  margin-top: 0;  
+  margin-bottom: 12px;  
+  color: var(--color-accent-1);  
+}  
+
+/* Form */  
+.form-row { margin-bottom: 12px; }  
+.contact-info label {  
+  display: block;  
+  margin-bottom: 6px;  
+  font-weight: 600;  
+}  
+.contact-info input[type="text"],  
+.contact-info input[type="email"],  
+.contact-info textarea {  
+  width: 100%;  
+  padding: 8px 10px;  
+  border: 1px solid var(--color-border);  
+  border-radius: 4px;  
+  font-size: 16px;  
+  color: #333;  
+  background: #fff;  
+  box-sizing: border-box;  
+}  
+.contact-info textarea {  
+  min-height: 120px;  
+  resize: vertical;  
+}  
+.radio-group label {  
+  display: block;  
+  margin-bottom: 6px;  
+}  
+.checkbox-row {  
+  display: flex;  
+  align-items: center;  
+}  
+.cta-btn {  
+  background: #f59e0b; 
+  color: #111111;  
+  border: none;  
+  padding: 12px 20px;  
+  border-radius: 6px;  
+  cursor: pointer;  
+  font-size: 16px;  
+}  
+.cta-btn:hover { background: darken(var(--color-accent-2), 10%); }  
+
+/* Employee gallery*/  
+
+
+.employee-gallery .employees {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: stretch;
+  gap: 12px;
+  margin: 0;
+  padding: 0; 
+}
+  
+.employee-gallery .employee {
+  text-align: center;
+  min-width: 180px;      
+  flex: 0 1 180px;       
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid var(--color-border);
+}
+
+.employee-gallery .employee img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;     /* bordes redondeados en las imágenes */
+  border: 2px solid #ddd;  /* borde de las imágenes (opcional) */
+  background: #f6f6f6;
 }
