@@ -3,9 +3,9 @@
   --color-secondary: #fff679f5;
   --color-accent-1: #1a1a1a;
   --color-accent-2: #ff7301;
-  --color-border: #e5e7eb;            /* borde suave para componentes */  
-  --color-bg-section: #f9f7e9;          /* fondo suave para secciones */  
-  --bg-map: #f2f2f2;                   /* fondo opcional para el contenedor del mapa */  
+  --color-border: #e5e7eb;            
+  --color-bg-section: #f9f7e9;            
+  --bg-map: #f2f2f2;                     
   --radius: 6px;    
 }
 
@@ -41,23 +41,24 @@ a{color: inherit; text-decoration: none;}
 }
 
 .right-menu .grid-four{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   gap: 10px;
-  list-style: none;
   padding: 0;
   margin: 0;
-  justify-items: center;
+  list-style: none;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .right-menu .grid-four li a{
-  display: block;
-  padding: 10px 14px;
-  border: 1px solid #333;
+  display: inline-block;
+  text-decoration: none;
+  padding: 18px 20px;
+  border: 2px solid #333;
   background: #fff;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 /* Sections */
@@ -143,7 +144,7 @@ a{color: inherit; text-decoration: none;}
 
 .adventures-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* five columns */
+  grid-template-columns: repeat(5, 1fr); /*five columns */
   gap: 1rem;
   align-items: stretch;
   width: 100%;
@@ -377,7 +378,133 @@ a{color: inherit; text-decoration: none;}
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 12px;     /* bordes redondeados en las imágenes */
-  border: 2px solid #ddd;  /* borde de las imágenes (opcional) */
+  border-radius: 12px;     
+    border: 2px solid #ddd;  
   background: #f6f6f6;
+}
+
+/* --INDEX PAGE -- 1) Full-width hero with absolute heading overlaid */
+.hero-outer {
+  position: relative;
+  width: 100%;
+  height: 520px; /* adjust as needed for visual impact */
+  overflow: hidden;
+  display: block;
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero-overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0; 
+  width: 100%;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.0) 60%);
+  color: #fff;
+  /* optional: a subtle backdrop to ensure readability on varied images */
+}
+.hero-title {
+  margin: 0;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  letter-spacing: .2px;
+  text-shadow: 0 2px 6px rgba(0,0,0,.4);
+}
+@media (max-width: 800px) {
+  .hero-outer { height: 420px; }
+  .hero-title { font-size: 1.75rem; }
+  .hero-overlay { padding: 1.5rem; }
+}
+
+/* 2) Content grid below hero (non-single-column layout) */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  padding: 2rem 1.5rem 4rem;
+  align-items: stretch;
+}
+.card-a, .card-b {
+  grid-column: span 6;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+.card-a .content-media img, .card-b .content-media img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.content-content { padding: 1rem; }
+.content-content h2 { margin: 0 0 .5rem; font-size: 1.25rem; }
+.content-content p, .content-content ul { margin: 0; color: #333; }
+
+/* Newsletter section */
+.newsletter {
+  grid-column: 1 / -1; /* span full width of the grid */
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 1.5rem;
+  background: #0b2a3a; /* brand color, adjust as needed */
+  color: #fff;
+  padding: 1.75rem;
+  border-radius: 8px;
+}
+.newsletter-content h2 { color: #fff; margin: 0 0 .5rem; }
+.newsletter-content p { margin: 0 0 1rem; }
+.newsletter-form {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+  padding: .75rem .9rem;
+  border: none;
+  border-radius: 4px;
+  min-width: 220px;
+}
+.newsletter-form button {
+  padding: .9rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  background: #e0f0ff;
+  color: #0a2540;
+  cursor: pointer;
+  font-weight: bold;
+}
+.newsletter-cta {
+  text-align: right;
+}
+.cta-link {
+  display: inline-block;
+  padding: .9rem 1.1rem;
+  background: #ffcc00;
+  color: #1a1a1a;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.sr-only { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .content-grid { grid-template-columns: repeat(12, 1fr); padding: 1.5rem; gap: 1.25rem; }
+  .card-a, .card-b { grid-column: span 12; }
+  .newsletter { grid-template-columns: 1fr; text-align: left; }
+  .newsletter-cta { text-align: left; }
+}
+@media (max-width: 600px) {
+  .hero-outer { height: 360px; }
+  .hero-title { font-size: 1.5rem; }
 }
