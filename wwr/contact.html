@@ -1,135 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<rel="stylesheet" href="styles/rafting.css">
-    <meta <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Thunderfalls White Water</title>
-    <link name="description"
-        content="Contact us to book your next rafting adventure with Thunderfalls White Water. Exciting trips, certified guides, and packages for all levels. Write, ask, or book now!">
-    <meta name="author" content="Fabiana Elizabeth Moya">
-    </head>
+<link rel="stylesheet" href="styles/rafting.css">
+<meta <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Thunderfalls White Water</title>
+<link name="description"
+    content="Contact us to book your next rafting adventure with Thunderfalls White Water. Exciting trips, certified guides, and packages for all levels. Write, ask, or book now!">
+<meta name="author" content="Fabiana Elizabeth Moya">
+</head>
 
-    <body>
-        <header class="header-row">
-            <div class="left-image">
-                <img src="images/logo-thunderfalls.png" alt="Sample Logo">
+<body>
+    <header class="header-row">
+        <div class="left-image">
+            <img src="images/logo-thunderfalls.png" alt="Sample Logo">
+        </div>
+
+        <nav class="right-menu">
+            <ul class="grid-four">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-area">
+        <section class="company-info">
+            <h1>Thunderfalls White Water</h1>
+            <p>434 Juan Vucetich Street<br>
+                Salta, Argentina<br>
+                +543874187088 <br>
+                info@whitewater.com
+            </p>
+        </section>
+
+        <!-- Form & Map-->
+        <section class="contact-grid">
+
+            <div class="mapa-wrap" aria-label="Map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.7851612473514!2d-65.40172236108997!3d-24.73425490581756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc140cfc8b0d1%3A0xa92e6be78a177066!2sC.%20Juan%20Vucetich%20434%2C%20A4400%20Salta!5e0!3m2!1ses-419!2sar!4v1759554222872!5m2!1ses-419!2sar"
+                    width="600" height="450" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
             </div>
 
-            <nav class="right-menu">
-                <ul class="grid-four">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="trips.html">Trips</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-        </header>
+            <!-- Contact Us -->
+            <div class="contact-info">
+                <h2>Contact Us</h2>
 
-        <main class="content-area">
-            <section class="company-info">
-                <h1>Thunderfalls White Water</h1>
-                <p>434 Juan Vucetich Street<br>
-                    Salta, Argentina<br>
-                    +543874187088 <br>
-                    info@whitewater.com
-                </p>
-            </section>
+                <form action="/send-form" method="post" aria-label="Contact form">
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
 
-            <!-- Form & Map-->
-            <section class="contact-grid">
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
 
-                <div class="mapa-wrap" aria-label="Map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.7851612473514!2d-65.40172236108997!3d-24.73425490581756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc140cfc8b0d1%3A0xa92e6be78a177066!2sC.%20Juan%20Vucetich%20434%2C%20A4400%20Salta!5e0!3m2!1ses-419!2sar!4v1759554222872!5m2!1ses-419!2sar"
-                        width="600" height="450" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                </div>
-
-                <!-- Contact Us -->
-                <div class="contact-info">
-                    <h2>Contact Us</h2>
-
-                    <form action="/send-form" method="post" aria-label="Contact form">
-                        <div class="form-row">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                    <fieldset class="form-row" aria-labelledby="subject-label">
+                        <legend id="subject-label">Message purpose</legend>
+                        <div class="radio-group">
+                            <label><input type="radio" name="subject" value="general_inquiry" checked> General
+                                Inquiry</label>
+                            <label><input type="radio" name="subject" value="reservation"> Reservation</label>
+                            <label><input type="radio" name="subject" value="website_suggestion"> Website
+                                Suggestion</label>
                         </div>
+                    </fieldset>
 
-                        <div class="form-row">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
-                        </div>
+                    <div class="form-row">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5"
+                            placeholder="Write your message here..."></textarea>
+                    </div>
 
-                        <fieldset class="form-row" aria-labelledby="subject-label">
-                            <legend id="subject-label">Message purpose</legend>
-                            <div class="radio-group">
-                                <label><input type="radio" name="subject" value="general_inquiry" checked> General
-                                    Inquiry</label>
-                                <label><input type="radio" name="subject" value="reservation"> Reservation</label>
-                                <label><input type="radio" name="subject" value="website_suggestion"> Website
-                                    Suggestion</label>
-                            </div>
-                        </fieldset>
+                    <div class="form-row checkbox-row">
+                        <label><input type="checkbox" id="checkbox-row" name="newsletter" checked> Subscribe me to
+                            the
+                            monthly
+                            newsletter</label>
+                    </div>
 
-                        <div class="form-row">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5"
-                                placeholder="Write your message here..."></textarea>
-                        </div>
+                    <div class="form-row btn-row">
+                        <button type="submit" class="cta-btn" id="button" aria-label="Submit contact form">Send
+                            Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
 
-                        <div class="form-row checkbox-row">
-                            <label><input type="checkbox" id="checkbox-row" name="newsletter" checked> Subscribe me to
-                                the
-                                monthly
-                                newsletter</label>
-                        </div>
+        <section class="employee-gallery" aria-label="Employee profiles">
+            <h2>Meet Our Team</h2>
+            <div class="employees">
+                <figure class="employee">
+                    <img src="images/employee1.jpeg" alt="Employee: Senior Rafting Guide">
+                    <figcaption>Alex Rivera — Senior Rafting Guide</figcaption>
+                </figure>
+                <figure class="employee">
+                    <img src="images/employee2.webp" alt="Employee: Operations Coordinator">
+                    <figcaption>Maria Lopez — Operations Coordinator</figcaption>
+                </figure>
+                <figure class="employee">
+                    <img src="images/employee3.jpeg" alt="Employee: Safety Guide">
+                    <figcaption>Jorge Martinez — Safety Guide</figcaption>
+                </figure>
+            </div>
 
-                        <div class="form-row btn-row">
-                            <button type="submit" class="cta-btn" id="button" aria-label="Submit contact form">Send
-                                Message</button>
-                        </div>
-                    </form>
-                </div>
-            </section>
+        </section>
+    </main>
 
-            <section class="employee-gallery" aria-label="Employee profiles">
-                <h2>Meet Our Team</h2>
-                <div class="employees">
-                    <figure class="employee">
-                        <img src="images/employee1.jpeg" alt="Employee: Senior Rafting Guide">
-                        <figcaption>Alex Rivera — Senior Rafting Guide</figcaption>
-                    </figure>
-                    <figure class="employee">
-                        <img src="images/employee2.webp" alt="Employee: Operations Coordinator">
-                        <figcaption>Maria Lopez — Operations Coordinator</figcaption>
-                    </figure>
-                    <figure class="employee">
-                        <img src="images/employee3.jpeg" alt="Employee: Safety Guide">
-                        <figcaption>Jorge Martinez — Safety Guide</figcaption>
-                    </figure>
-                </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <nav class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="images/fb-icon.png.png" alt="Facebook Icon" class="social-icon">
+            </a>
+            <a href="https://linkedin.com">
+                <img src="images/linkedin-icon.png.png" alt="LinkedIn Icon" class="social-icon">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram-square.svg" alt="Instagram Icon" class="social-icon">
+            </a>
+        </nav>
+        <p> © 2025 ⚡ ThunderFalls White Water ⚡ - Fabiana Elizabeth Moya </p>
+    </footer>
 
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <nav class="socialmedia">
-                <a href="https://facebook.com">
-                    <img src="images/fb-icon.png.png" alt="Facebook Icon" class="social-icon">
-                </a>
-                <a href="https://linkedin.com">
-                    <img src="images/linkedin-icon.png.png" alt="LinkedIn Icon" class="social-icon">
-                </a>
-                <a href="https://instagram.com">
-                    <img src="images/instagram-square.svg" alt="Instagram Icon" class="social-icon">
-                </a>
-            </nav>
-            <p> © 2025 ⚡ ThunderFalls White Water ⚡ - Fabiana Elizabeth Moya </p>
-        </footer>
-
-    </body>
+</body>
 
 </html>
